@@ -142,6 +142,12 @@ export class CardView extends ItemView {
       return "Visa";
     }
 
+    // Mir
+    re = new RegExp("^220[0-4]");
+    if (cardNum.match(re) != null) {
+      return "Mir";
+    }
+
     return null;
   }
 }
