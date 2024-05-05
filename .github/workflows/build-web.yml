@@ -293,8 +293,10 @@ jobs:
           upload_translations: false
 
   trigger-web-vault-deploy:
+    #taxall begin
+    if: ${{ false }}
+    #taxall end
     name: Trigger web vault deploy
-    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-22.04
     needs: build-artifacts
     steps:
@@ -327,8 +329,10 @@ jobs:
             })
 
   check-failures:
+    #taxall begin
+    if: ${{ false }}
+    #taxall end
     name: Check for failures
-    if: always()
     runs-on: ubuntu-22.04
     needs:
       - setup
