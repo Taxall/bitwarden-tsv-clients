@@ -10,6 +10,9 @@ on:
 
 jobs:
   chromatic:
+    #taxall begin
+    if: ${{ false }}
+    #taxall end
     name: Chromatic
     runs-on: ubuntu-22.04
 

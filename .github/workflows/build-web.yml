@@ -38,6 +38,9 @@ env:
 
 jobs:
   setup:
+    #taxall begin
+    if: ${{ false }}
+    #taxall end
     name: Setup
     runs-on: ubuntu-22.04
     outputs:
@@ -59,6 +62,9 @@ jobs:
           echo "node_version=$NODE_VERSION" >> $GITHUB_OUTPUT
 
   build-artifacts:
+    #taxall begin
+    if: ${{ false }}
+    #taxall end
     name: Build artifacts
     runs-on: ubuntu-22.04
     needs: setup
@@ -138,6 +144,9 @@ jobs:
 
 
   build-containers:
+    #taxall begin
+    if: ${{ false }}
+    #taxall end
     name: Build Docker images
     runs-on: ubuntu-22.04
     needs:
@@ -249,8 +258,10 @@ jobs:
 
 
   crowdin-push:
+    #taxall begin
+    if: ${{ false }}
+    #taxall end
     name: Crowdin Push
-    if: github.ref == 'refs/heads/main'
     needs: build-artifacts
     runs-on: ubuntu-22.04
     steps:
