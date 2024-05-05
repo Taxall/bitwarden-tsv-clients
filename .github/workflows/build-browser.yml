@@ -244,6 +244,9 @@ jobs:
           if-no-files-found: error
 
   build-safari:
+    #taxall begin
+    if: ${{ false }}
+    #taxall end
     name: Build Safari
     runs-on: macos-13
     needs:
