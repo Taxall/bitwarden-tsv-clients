@@ -236,6 +236,9 @@ jobs:
 
 
   windows:
+    #taxall begin
+    if: ${{ false }}
+    #taxall end
     name: Windows Build
     runs-on: windows-2022
     needs: setup
@@ -443,6 +446,9 @@ jobs:
 
 
   macos-build:
+    #taxall begin
+    if: ${{ false }}
+    #taxall end
     name: MacOS Build
     # Note, this workflow is running on macOS 11 to maintain compatibility with macOS 10.15 Catalina, 
     # as the newer versions will case the native modules to be incompatible with older macOS systems
@@ -604,6 +610,9 @@ jobs:
 
 
   macos-package-github:
+    #taxall begin
+    if: ${{ false }}
+    #taxall end
     name: MacOS Package GitHub Release Assets
     # Note, this workflow is running on macOS 11 to maintain compatibility with macOS 10.15 Catalina, 
     # as the newer versions will case the native modules to be incompatible with older macOS systems
@@ -813,6 +822,9 @@ jobs:
 
 
   macos-package-mas:
+    #taxall begin
+    if: ${{ false }}
+    #taxall end
     name: MacOS Package Prod Release Asset
     # Note, this workflow is running on macOS 11 to maintain compatibility with macOS 10.15 Catalina, 
     # as the newer versions will case the native modules to be incompatible with older macOS systems
@@ -1013,6 +1025,9 @@ jobs:
 
 
   macos-package-dev:
+    #taxall begin
+    if: ${{ false }}
+    #taxall end
     name: MacOS Package Dev Release Asset
     if: false  # We need to look into how code signing works for dev
     # Note, this workflow is running on macOS 11 to maintain compatibility with macOS 10.15 Catalina, 
@@ -1200,6 +1215,9 @@ jobs:
 
 
   crowdin-push:
+    #taxall begin
+    if: ${{ false }}
+    #taxall end
     name: Crowdin Push
     if: github.ref == 'refs/heads/main'
     needs:
